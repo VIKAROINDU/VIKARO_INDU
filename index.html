@@ -3,17 +3,25 @@
 <head>
   <meta charset="UTF-8">
   <title>VIKARO_INDU</title>
-  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
 
-<h1>VIKARO_INDU</h1>
+<body class="bg-gray-100">
 
-<div id="products"></div>
+<header class="bg-black text-white p-4 text-center text-2xl font-bold">
+  VIKARO_INDU
+</header>
 
-<h2>Carrito</h2>
-<ul id="cart"></ul>
-<button onclick="checkout()">Pagar</button>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-6 p-6" id="products"></div>
+
+<!-- Carrito -->
+<div class="fixed bottom-0 right-0 bg-white shadow-xl p-4 w-72">
+  <h2 class="font-bold text-lg mb-2">Carrito</h2>
+  <ul id="cart"></ul>
+  <button onclick="checkout()" class="bg-black text-white w-full mt-2 p-2">
+    Pagar
+  </button>
+</div>
 
 <script src="cart.js"></script>
 </body>

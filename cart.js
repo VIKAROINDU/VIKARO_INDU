@@ -4,13 +4,17 @@ fetch("products.json")
   .then(res => res.json())
   .then(products => {
     const container = document.getElementById("products");
+
     products.forEach(p => {
       container.innerHTML += `
-        <div>
-          <img src="${p.image}" width="150">
-          <h3>${p.name}</h3>
+        <div class="bg-white p-4 shadow hover:scale-105 transition">
+          <img src="${p.image}" class="w-full h-48 object-cover">
+          <h3 class="font-bold mt-2">${p.name}</h3>
           <p>$${p.price}</p>
-          <button onclick='addToCart(${JSON.stringify(p)})'>Agregar</button>
+          <button class="bg-black text-white w-full mt-2 p-2"
+            onclick='addToCart(${JSON.stringify(p)})'>
+            Agregar
+          </button>
         </div>
       `;
     });
@@ -24,11 +28,12 @@ function addToCart(product) {
 function renderCart() {
   const cartList = document.getElementById("cart");
   cartList.innerHTML = "";
+
   cart.forEach(p => {
     cartList.innerHTML += `<li>${p.name} - $${p.price}</li>`;
   });
 }
 
 function checkout() {
-  alert("Después conectamos MercadoPago 🚀");
+  alert("Después conectamos MercadoPago 🔥");
 }
