@@ -1,0 +1,14 @@
+[
+  {
+    "id": 1,
+    "name": "Remera Oversize Negra",
+    "price": 8500,
+    "image": "https://via.placeholder.com/200"
+  },
+  {
+    "id": 2,
+    "name": "Buzo Blanco",
+    "price": 15000,
+    "image": "https://via.placeholder.com/200"
+  }
+]
